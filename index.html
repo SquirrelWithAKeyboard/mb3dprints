@@ -11,15 +11,31 @@
     header {
       background: #2E6F40;
       color: #fff;
-      padding: 20px;
-      text-align: center;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-container img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
     nav a {
       color: #fff;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: 600;
     }
@@ -29,6 +45,7 @@
       background: url('https://mb3dprints.co.uk/hero.png') center/cover no-repeat;
       color: white;
       padding: 120px 20px;
+      text-align: center;
       text-shadow: 0 3px 8px rgba(0,0,0,0.7);
     }
     #home h2 { font-size: 2.5em; margin-bottom: 10px; }
@@ -56,14 +73,14 @@
       margin: auto;
     }
     .gallery img {
-  width: 100%;
-  height: auto; /* LET THE IMAGE BE FREE 😤 */
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  object-fit: contain; /* Don’t crop it */
-  background: #fff; /* Looks clean if transparent */
-  padding: 8px; /* Optional frame */
-}
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      object-fit: contain;
+      background: #fff;
+      padding: 8px;
+    }
 
     /* Events */
     .events {
@@ -79,23 +96,48 @@
       box-shadow: 0 3px 8px rgba(0,0,0,0.08);
     }
 
+    /* Contact */
+    #contact a {
+      color: #2E6F40;
+      font-weight: bold;
+    }
+    .social-links {
+      margin-top: 10px;
+    }
+    .social-links a {
+      display: inline-block;
+      padding: 10px 16px;
+      margin: 5px;
+      background: #2E6F40;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
     /* Footer */
     footer {
       background: #111;
       color: #aaa;
       text-align: center;
       padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>MB3D Printing</h1>
+  <div class="logo-container">
+    <img src="logo.png" alt="MB3D Logo"> <!-- Put your logo file name -->
+    <h1>MB3D Printing</h1>
+  </div>
+
   <nav>
     <a href="#about">About</a>
     <a href="#gallery">Gallery</a>
     <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
@@ -106,13 +148,13 @@
 
 <section id="about">
   <h2>About Us</h2>
-  <p>Founded in 2023, MB3D creates creative 3D printed fidgets, models, and more. We also take custom print requests — an order page is coming soon!</p>
+  <p>Founded in 2023, MB3D creates creative 3D printed fidgets, models, and more.
+  We also take custom print requests — an order page is coming soon!</p>
 </section>
 
 <section id="gallery">
   <h2>Our Prints</h2>
   <div class="gallery">
-    <!-- Replace these 4 placeholder images with your own later -->
     <img src="1.jpeg" alt="Print 1">
     <img src="2.jpeg" alt="Print 2">
     <img src="3.jpeg" alt="Print 3">
@@ -127,6 +169,17 @@
     <li><strong>3/12/25:</strong> Nethermains Primary School — 5PM - 7PM</li>
     <li><strong>6/12/25:</strong> Kennoway Carnival Christmas Fayre — Join us for festive fun!</li>
   </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: <a href="mailto:business@mb3dprints.co.uk">business@mb3dprints.co.uk</a></p>
+
+  <div class="social-links">
+    <a href="https://www.facebook.com/profile.php?id=61583088493940" target="_blank">Facebook</a>
+  </div>
+
+  <p>We’d love to hear from you! 💬</p>
 </section>
 
 <footer>
